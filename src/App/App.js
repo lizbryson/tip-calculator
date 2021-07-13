@@ -5,7 +5,7 @@ import './App.css';
 
 const App = () => {
   
-  const [tipRate, setTipRate] = useState(0);
+  const [tipRate, setTipRate] = useState(.25);
   const [tipAmount, setTipAmount] = useState(0);
   const [totalPeople, setTotalPeople] = useState(1);
   const [totalBill, setTotalBill] = useState(0);
@@ -15,9 +15,12 @@ const App = () => {
       <TipForm 
         totalPeople={totalPeople} 
         totalBill={totalBill}
+        tipRate={tipRate}
         setTotalBill={setTotalBill}
+        setTipRate={setTipRate}
         setTotalPeople={setTotalPeople} />
       <TipResults
+        tipRate={tipRate}
         totalPeople={totalPeople}
         totalBill={totalBill} 
         />

@@ -2,14 +2,15 @@ import React from 'react';
 import ResultsLine from '../ResultsLine/ResultsLine';
 import ResetButton from '../ResetButon/ResetButton';
 
-const TipResults = ({totalPeople, totalBill}) => {
+const TipResults = ({totalPeople, totalBill, tipRate}) => {
+  const tipTotal = parseInt(totalBill, 10) * tipRate;
+  const displayTotalValue = '$' + ((parseInt(totalBill) + tipTotal) / 2);
+  const displayTotalTip = '$' + (tipTotal / 2);
   
-  const displayValue = '$' + parseInt(totalBill) / 2;
-  
-  return (
+  return (  
     <div className="tipResults">
-      <ResultsLine key="results_tip" title="Tip Amount" value="" />
-      <ResultsLine key="results_total" title="Total" value={displayValue} />
+      <ResultsLine key="results_tip" title="Tip Amount" value={displayTotalTip} />
+      <ResultsLine key="results_total" title="Total" value={displayTotalValue} />
       <ResetButton />
     </div>
   )
