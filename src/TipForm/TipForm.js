@@ -3,7 +3,7 @@ import TipRadio from '../TipRadio/TipRadio';
 import TipInput from '../TipInput/TipInput';
 import './TipForm.css';
 
-const TipForm = ({ totalPeople, totalBill, setTotalBill }) => {
+const TipForm = ({ totalPeople, totalBill, setTotalBill, setTotalPeople }) => {
   
   const levels = [5, 10, 15, 25, 30, 50];
   
@@ -30,9 +30,11 @@ const TipForm = ({ totalPeople, totalBill, setTotalBill }) => {
         {tipRadioButtons}
       </fieldset>
       <TipInput 
-        key="input_people" 
-        label="People" 
+        key="input_people"
+        label="People"
         placeholder="1"
+        value={totalPeople}
+        updateState={ setTotalPeople }
        />
     </form>
   )

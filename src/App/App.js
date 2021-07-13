@@ -15,10 +15,11 @@ const App = () => {
       <TipForm 
         totalPeople={totalPeople} 
         totalBill={totalBill}
-        setTotalBill={setTotalBill} />
-      <TipResults 
+        setTotalBill={setTotalBill}
+        setTotalPeople={setTotalPeople} />
+      <TipResults
         totalPeople={totalPeople}
-        totalBill={totalBill}
+        totalBill={totalBill} 
         />
     </div>
   )

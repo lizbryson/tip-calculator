@@ -1,8 +1,13 @@
 import React from 'react';
 
 const ResetButton = () => {
+  const handleResetClick = () => {
+    alert('reset clicked');
+  }
   return (
-    <button className="reset-button">Reset</button>
+    <button
+      onClick={ handleResetClick }
+      className="reset-button">Reset</button>
   )
 }
 

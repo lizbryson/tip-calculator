@@ -1,38 +1,139 @@
-.App {
+
+:root {
+ --lightBlue: #bee6e8;
+ --lightTeal: #f1f8fb;
+ --darkTeal: #00474c;
+ --brightTeal: #00c3ab;
+ --borderRadius: 4px;
+}
+
+*,
+input,
+button {
+  box-sizing: border-box;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+body {
+  background-color: var(--lightBlue);
+  padding: 4rem 2rem 2rem;
+}
+
+.app-body {
+  padding: 2rem;
+}
+
+.tipCalculator {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.tipResults,
+.tipForm {
+  width: 100%;
+}
+.tipForm {
+  margin-bottom: 2rem;
+}
+.tipForm__input,
+.tipForm__label {
+  display: block;
+  width: 100%;
+}
+
+.tipForm__label {
+  margin-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.tipForm__input {
+  background-color: var(--lightTeal);
+  background-image: none;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  border: none;
+  padding: .75rem;
+  border-radius: var(--borderRadius);
+  text-align: right;
+  
+}
+
+.tipForm__fieldset {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  
+}
+
+.tipForm__radio {
+  width: 32%;
+  position: relative;
+  margin-bottom: .5rem;
+}
+
+.tipFormRadio__input {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  height: 95%;
+}
+
+.tipFormRadio__input:checked + span {
+  background-color: var(--brightTeal);
+}
+
+.tipForm__radio span {
+  display: block;
+  background-color: var(--darkTeal);
+  padding: .75rem .5rem;
+  font-size: 1.5rem;
+  border-radius: var(--borderRadius);
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tipResults {
+  background-color: var(--darkTeal);
+  color: #fff;
+  border-radius: var(--borderRadius);
+  padding: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.reset-button {
+  display: block;
+  background-color: #006a6e;
+  color: #fff;
+  border-radius: var(--borderRadius);
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  padding: .75rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Tip Results  */
+.tipResults__section {
+  margin-bottom: 1.5rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.tipResults__title {
+  margin: 0 0 .25rem 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tipResults__subtitle {
+  margin: 0;
+  font-size: .875rem;
+  color: var(--lightBlue);
+}
+.tipResults__total {
+  color: var(--brightTeal);
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: right;
 }
