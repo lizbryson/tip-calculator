@@ -1,6 +1,6 @@
 export const convertValue = {
   stripCurrency: str => {
-      return  str.replace(/[^0-9.,]/g, '');
+      return str.replace(/[^0-9.,]/g, '');
   },
   toNumber: str => {
     if (typeof str === 'string') {
