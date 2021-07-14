@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import TipForm from '../TipForm/TipForm';
 import TipResults from '../TipResults/TipResults';
-import { convertValue } from '../Helpers.js';
 import './App.css';
 
 const App = () => {
