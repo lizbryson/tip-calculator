@@ -5,14 +5,8 @@ export const convertValue = {
   toNumber: str => {
     if (typeof str === 'string') {
       str = str.replace(/[^0-9.,]/g, '');
-      console.log(str);
       str = parseFloat(str);
-      console.log((+str).toFixed(2));
-      // str = parseFloat(str);
-      // console.log(str);
-
     }
-
     return str;
   },
   toCurrency: num => {
