@@ -24,7 +24,7 @@ const TipForm = ({ totalPeople, totalBill, setTotalBill, setTotalPeople, setTipR
         value={totalBill}
         updateState={setTotalBill}
          />
-      <label className="tipForm__label" for="tip-rate">Select Tip %</label>
+      <label className="tipForm__label" htmlFor="tip-rate">Select Tip %</label>
       <fieldset onChange={handleRadioChange} id="tip-rate" className="tipForm__fieldset">
         {tipRadioButtons}
       </fieldset>

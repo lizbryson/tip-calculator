@@ -1,8 +1,9 @@
 import React from 'react';
 
-const ResetButton = () => {
+const ResetButton = ({ setTotalBill, setTotalPeople }) => {
   const handleResetClick = () => {
-    alert('reset clicked');
+    setTotalBill(0);
+    setTotalPeople(1);
   }
   return (
     <button

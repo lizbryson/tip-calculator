@@ -1,7 +1,8 @@
 import React from 'react';
+import { convertValue } from '../Helpers.js';
 
 
-const ResultsLine = ({title, value}) => {
+const ResultsLine = ({ title, value }) => {
   return (
     <div className="tipResults__section">
       <div className="tipResults__labels">
@@ -14,6 +15,5 @@ const ResultsLine = ({title, value}) => {
     </div>
   )
 }
-
 
 export default ResultsLine;
